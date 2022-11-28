@@ -1,0 +1,20 @@
+﻿CREATE PROCEDURE SUMOFEVEN
+	@N INT
+AS
+BEGIN
+	DECLARE @SUM INT, @I INT
+	SET @I = 1
+	SET @SUM = 0
+
+	WHILE @I <= @N
+	BEGIN
+		IF @I % 2 = 0
+		BEGIN
+			SET @SUM = @SUM + @I
+		END
+		SET @I = @I + 1
+	END 
+	PRINT N'Tổng các số chẵn: ' + CAST(@SUM AS VARCHAR)
+END
+
+EXECUTE SUMOFEVEN 20

@@ -1,0 +1,8 @@
+CREATE PROCEDURE Hello
+	@NAME VARCHAR(30)
+AS 
+BEGIN
+	PRINT 'Xin chào' + @NAME
+END;
+
+EXECUTE Hello N'Dung';
